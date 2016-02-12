@@ -79,9 +79,9 @@
                         cnt--;
                         var item = $('<li />')
                             .append(span('"', 'q'))
-                            .append(key)
+                            .append(span(key, 's'))
                             .append(span('"', 'q'))
-                            .append(': ')
+                            .append(span(': ', 'p'))
                             .append(genBlock(data, level + 1));
 
                         if (['object', 'array'].indexOf($.type(data)) !== -1 && !$.isEmptyObject(data)) {
@@ -89,7 +89,7 @@
                         }
 
                         if (cnt > 0) {
-                            item.append(',');
+                            item.append(span(',', 'p'));
                         }
 
                         items.append(item);
@@ -140,7 +140,7 @@
                         }
 
                         if (cnt > 0) {
-                            item.append(',');
+                            item.append(span(',', 'p'));
                         }
 
                         items.append(item);
