@@ -79,7 +79,7 @@
                         cnt--;
                         var item = $('<li />')
                             .append(span('"', 'q'))
-                            .append(span(key, 's'))
+                            .append(span(key, 'k'))
                             .append(span('"', 'q'))
                             .append(span(': ', 'p'))
                             .append(genBlock(data, level + 1));
@@ -179,9 +179,9 @@
                         .html(val);
 
                     return $('<span />')
-                        .append(span('"', 'q'))
+                        .append(span('"', 'str'))
                         .append(text)
-                        .append(span('"', 'q'));
+                        .append(span('"', 'str'));
 
                 case 'number':
                     return span(val.toString(), 'num');
